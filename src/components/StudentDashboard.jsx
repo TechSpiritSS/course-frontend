@@ -33,6 +33,13 @@ const StudentDashboard = () => {
     dispatch(markCourseAsComplete(id));
   };
 
+  const calcDueDate = (duration) => {
+    const today = new Date();
+    const dueDate = new Date(today);
+    dueDate.setDate(dueDate.getDate() + duration);
+    return dueDate.toDateString();
+  };
+
   return (
     <Container style={{ marginTop: '20px' }}>
       <Typography variant="h4" gutterBottom>
@@ -44,27 +51,38 @@ const StudentDashboard = () => {
             <ListItem>
               <ListItemText
                 primary={course.name}
-                secondary={`Instructor: ${course.instructor}`}
+                secondary={
+                  <>
+                    Instructor: {course.instructor}
+                    <br />
+                    Due Date: {calcDueDate(course.dueDays)}
+                  </>
+                }
               />
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={() => handleRemoveCourse(course.id)}
-              >
-                Remove
-              </Button>
-              <LinearProgress
-                variant="determinate"
-                value={course.progress}
-                style={{ marginLeft: '10px', width: '150px' }}
-              />
-              <Button
-                variant="outlined"
-                onClick={() => handleMarkComplete(course.id)}
-                style={{ marginLeft: '10px' }}
-              >
-                Mark as Complete
-              </Button>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Typography variant="body2" sx={{ marginRight: '10px' }}>
+                  {course.progress}%
+                </Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={course.progress}
+                  style={{ width: '150px' }}
+                />
+                <Button
+                  variant="outlined"
+                  onClick={() => handleMarkComplete(course.id)}
+                  style={{ marginLeft: '10px' }}
+                >
+                  Mark as Complete
+                </Button>
+                <Button
+                  color="error"
+                  sx={{ marginLeft: '10px' }}
+                  onClick={() => handleRemoveCourse(course.id)}
+                >
+                  Remove
+                </Button>
+              </div>
             </ListItem>
             <Divider />
           </div>

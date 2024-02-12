@@ -6,7 +6,7 @@ const sampleCourses = [
     description:
       'Learn the basics of React Native development and build your first mobile app.',
     enrollmentStatus: 'Open',
-    thumbnail: 'https://via.placeholder.com/150',
+    thumbnail: '/courses/Introduction_to_React_Native.jpg',
     duration: '8 weeks',
     schedule: 'Tuesdays and Thursdays, 6:00 PM-8:00 PM',
     location: 'Online',
@@ -37,6 +37,7 @@ const sampleCourses = [
         email: 'bob@example.com',
       },
     ],
+    dueDays: 56,
   },
   {
     id: 2,
@@ -45,7 +46,7 @@ const sampleCourses = [
     description:
       'Deep dive into advanced JavaScript concepts such as closures, prototypes, and async programming.',
     enrollmentStatus: 'Open',
-    thumbnail: 'https://via.placeholder.com/150',
+    thumbnail: '/courses/AdvanceJS.jpg',
     duration: '10 weeks',
     schedule: 'Mondays and Wednesdays, 7:00 PM-9:00 PM',
     location: 'Online',
@@ -75,6 +76,7 @@ const sampleCourses = [
         email: 'daisy@example.com',
       },
     ],
+    dueDays: 70,
   },
   {
     id: 3,
@@ -83,7 +85,7 @@ const sampleCourses = [
     description:
       'Comprehensive course covering Python programming for data science applications.',
     enrollmentStatus: 'Open',
-    thumbnail: 'https://via.placeholder.com/150',
+    thumbnail: '/courses/Python-Data-Science-Tutorial.jpg',
     duration: '12 weeks',
     schedule: 'Fridays, 5:00 PM-7:00 PM',
     location: 'Online',
@@ -113,6 +115,7 @@ const sampleCourses = [
         email: 'frank@example.com',
       },
     ],
+    dueDays: 84,
   },
   {
     id: 4,
@@ -121,7 +124,7 @@ const sampleCourses = [
     description:
       'Learn modern web development with React framework, including state management and routing.',
     enrollmentStatus: 'Open',
-    thumbnail: 'https://via.placeholder.com/150',
+    thumbnail: '/courses/WebDev-with-ReactJS.jpg',
     duration: '10 weeks',
     schedule: 'Tuesdays and Thursdays, 6:00 PM-8:00 PM',
     location: 'Online',
@@ -151,6 +154,7 @@ const sampleCourses = [
         email: 'hannah@example.com',
       },
     ],
+    dueDays: 42,
   },
   {
     id: 5,
@@ -160,7 +164,7 @@ const sampleCourses = [
       'Introduction to machine learning concepts and algorithms, including supervised and unsupervised learning.',
     enrollmentStatus: 'Open',
 
-    thumbnail: 'https://via.placeholder.com/150',
+    thumbnail: '/courses/ML_Fundamentals.jpg',
     duration: '10 weeks',
     schedule: 'Wednesdays, 5:00 PM-7:00 PM',
     location: 'Online',
@@ -193,6 +197,7 @@ const sampleCourses = [
         email: 'jack@example.com',
       },
     ],
+    dueDays: 98,
   },
   {
     id: 6,
@@ -201,7 +206,7 @@ const sampleCourses = [
     description:
       'Comprehensive course covering digital marketing strategies, SEO, social media, and content marketing.',
     enrollmentStatus: 'Open',
-    thumbnail: 'https://via.placeholder.com/150',
+    thumbnail: '/courses/Digital_Marketting.png',
     duration: '8 weeks',
     schedule: 'Mondays and Fridays, 10:00 AM-12:00 PM',
     location: 'Online',
@@ -231,6 +236,7 @@ const sampleCourses = [
         email: 'linda@example.com',
       },
     ],
+    dueDays: 14,
   },
   {
     id: 7,
@@ -239,7 +245,7 @@ const sampleCourses = [
     description:
       'Fundamental concepts of data structures including arrays, linked lists, stacks, and queues.',
     enrollmentStatus: 'Open',
-    thumbnail: 'https://via.placeholder.com/150',
+    thumbnail: '/courses/DSA.jpg',
     duration: '6 weeks',
     schedule: 'Thursdays, 7:00 PM-9:00 PM',
     location: 'Online',
@@ -270,6 +276,7 @@ const sampleCourses = [
         email: 'nathan@example.com',
       },
     ],
+    dueDays: 28,
   },
   {
     id: 8,
@@ -278,7 +285,7 @@ const sampleCourses = [
     description:
       'Learn the principles of mobile app design, user experience (UX), and user interface (UI) design.',
     enrollmentStatus: 'Open',
-    thumbnail: 'https://via.placeholder.com/150',
+    thumbnail: '/courses/MobileDesign.jpg',
     duration: '8 weeks',
     schedule: 'Tuesdays and Thursdays, 6:00 PM-8:00 PM',
     location: 'Online',
@@ -309,6 +316,7 @@ const sampleCourses = [
         email: 'penelope@example.com',
       },
     ],
+    dueDays: 35,
   },
   {
     id: 9,
@@ -317,7 +325,7 @@ const sampleCourses = [
     description:
       'Intensive bootcamp covering modern frontend web development technologies such as HTML5, CSS3, JavaScript, and React.',
     enrollmentStatus: 'Open',
-    thumbnail: 'https://via.placeholder.com/150',
+    thumbnail: '/courses/FE_Bootcamp.png',
     duration: '12 weeks',
     schedule: 'Mondays, Wednesdays, and Fridays, 6:00 PM-8:00 PM',
     location: 'Online',
@@ -349,6 +357,7 @@ const sampleCourses = [
         email: 'rachel@example.com',
       },
     ],
+    dueDays: 21,
   },
   {
     id: 10,
@@ -357,7 +366,7 @@ const sampleCourses = [
     description:
       'Comprehensive course covering the fundamentals of artificial intelligence, including machine learning, neural networks, and natural language processing.',
     enrollmentStatus: 'Open',
-    thumbnail: 'https://via.placeholder.com/150',
+    thumbnail: '/courses/AI.jpg',
     duration: '14 weeks',
     schedule: 'Saturdays, 10:00 AM-12:00 PM',
     location: 'Online',
@@ -391,6 +400,7 @@ const sampleCourses = [
         email: 'tina@example.com',
       },
     ],
+    dueDays: 112,
   },
 ];
 

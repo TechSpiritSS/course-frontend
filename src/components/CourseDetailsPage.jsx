@@ -13,6 +13,7 @@ import {
   AccordionSummary,
   AccordionDetails,
   CardHeader,
+  CardMedia,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { enrollCourse } from '../context/slices/courseSlice';
@@ -39,11 +40,10 @@ const CourseDetailsPage = () => {
 
   return (
     <Container
-      style={{
+      sx={{
         display: 'flex',
         gap: '20px',
         padding: '20px',
-        // background: 'linear-gradient(to right, #ff758c, #ff7eb3)',
         borderRadius: '10px',
         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
         color: '#fff',
@@ -56,8 +56,7 @@ const CourseDetailsPage = () => {
         </Typography>
         <Card
           variant="outlined"
-          style={{
-            background: 'rgba(255, 255, 255, 0.1)',
+          sx={{
             border: '1px solid #fff',
             borderRadius: '10px',
           }}
@@ -78,20 +77,20 @@ const CourseDetailsPage = () => {
             </Typography>
             <Card
               variant="outlined"
-              style={{
+              sx={{
                 marginBottom: '10px',
               }}
             >
               <CardContent>
                 <List
-                  style={{
+                  sx={{
                     margin: '0px',
                     padding: '0px',
                   }}
                 >
                   {selectedCourse.prerequisites.map((prerequisite, index) => (
                     <ListItem
-                      style={{
+                      sx={{
                         margin: '0px',
                         padding: '0px',
                       }}
@@ -105,8 +104,7 @@ const CourseDetailsPage = () => {
             </Card>
             <Typography variant="body1">Syllabus:</Typography>
             <Accordion
-              style={{
-                background: 'rgba(255, 255, 255, 0.2)',
+              sx={{
                 marginBottom: '10px',
               }}
             >
@@ -135,7 +133,11 @@ const CourseDetailsPage = () => {
                 variant="contained"
                 color="secondary"
                 onClick={handleEnroll}
-                style={{ borderRadius: '20px' }}
+                sx={{
+                  borderRadius: '20px',
+                  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                  marginTop: '10px',
+                }}
               >
                 Enroll Now!
               </Button>
@@ -151,13 +153,15 @@ const CourseDetailsPage = () => {
         <Card variant="outlined">
           <CardHeader title="Course Thumbnail" />
           <CardContent>
-            <img
+            <CardMedia
               src={selectedCourse.thumbnail}
+              component="img"
               alt="Course Thumbnail"
-              style={{
+              sx={{
                 width: '100%',
                 borderRadius: '10px',
                 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                objectFit: 'cover',
               }}
             />
           </CardContent>

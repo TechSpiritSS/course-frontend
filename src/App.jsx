@@ -6,18 +6,34 @@ import CourseDetailsPage from './components/CourseDetailsPage';
 import Navbar from './components/Navbar';
 import StudentDashboard from './components/StudentDashboard';
 
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material';
+
+// Define custom theme
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Poppins, sans-serif',
+  },
+  shape: {
+    borderRadius: 25,
+  },
+});
+
 function App() {
   return (
-    <Provider store={store}>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<CourseListingPage />} />
-          <Route path="/courses/:id" element={<CourseDetailsPage />} />
-          <Route path="/dashboard" element={<StudentDashboard />} />
-        </Routes>
-      </Router>
-    </Provider>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Provider store={store}>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<CourseListingPage />} />
+            <Route path="/courses/:id" element={<CourseDetailsPage />} />
+            <Route path="/dashboard" element={<StudentDashboard />} />
+          </Routes>
+        </Router>
+      </Provider>
+    </ThemeProvider>
   );
 }
 

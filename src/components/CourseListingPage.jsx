@@ -41,12 +41,28 @@ const CourseListingPage = () => {
               to={`/courses/${course.id}`}
               style={{ textDecoration: 'none' }}
             >
-              <Card>
+              <Card
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  height: '100%',
+                  boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+                  borderRadius: '10px',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                  transition: '0.3s',
+                  '&:hover': {
+                    boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
+                    transform: 'scale(1.02)',
+                  },
+                }}
+              >
                 <CardMedia
                   component="img"
-                  height="140"
+                  height="180"
                   image={course.thumbnail}
                   alt={course.name}
+                  sx={{ objectFit: 'fill' }}
                 />
                 <CardContent>
                   <Typography variant="h5" gutterBottom>
