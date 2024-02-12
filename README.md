@@ -4,6 +4,7 @@ This project is a Course Management System implemented using React. It allows us
 
 [Watch the Loom Video](https://www.loom.com/embed/f00665472e2a4f88a9d5531ba6015f13?sid=2c45c8ba-cd5e-425d-967a-0b31d7ac24b9)
 
+[Live URL](https://alemeno-course-fe.netlify.app/)
 
 ## Features
 
